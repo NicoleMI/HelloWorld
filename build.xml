@@ -1,0 +1,17 @@
+<project name="HelloWorld" basedir="." default="default">
+
+<target name="compile">
+	<delete file="src/HelloWorld.class" />
+	<javac srcdir="src" includeantruntime="false" />
+</target>
+
+<target name="run">
+	<java classname="HelloWorld" classpath="src" />
+</target>
+
+<target name="default">
+	<antcall target="compile" />
+	<antcall target="run" />
+</target>
+
+</project>
